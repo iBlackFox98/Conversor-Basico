@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            h1 {
+                text-align: center;
+            }
+            .container {
+                border: 1px solid #eee;
+                padding: 20px 40px;
+                width: 300px;
+                overflow: hidden;
+                margin: 0 auto;
+            }
+            select {
+               height: 30px;
+               font-size: 12px;
+               margin-bottom: 10px;
+               width: 100%;
+            }
+            .conversor {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .conversor > div{
+                display: flex;
+                flex-direction: column;
+            }
+            .conversor div input{
+                width: 120px;
+                margin-bottom: 10px;
+                font-size: 12px;
+                height: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Conversor</h1>
+        <div class="container">
+            <select name="" class="convertion" id="conversor">
+                <option value="-1" selected disabled>Seleccione una opción de conversión</option>
+                <option value="1">Temperatura</option>
+                <option value="2">Longitud</option>
+                <option value="3">Tiempo</option>
+            </select>
+            <div class="conversor">
+                <div>
+                    <input type="text" id="val1" class="result" onkeyup="calc(this)">
+                    <select name="" id="cbx1" class="cbxMeasure">
+                    </select>
+                </div>
+                <span>=</span>
+                <div>
+                    <input type="text" id="val2" class="result">
+                    <select name="" id="cbx2" class="cbxMeasure">
+                    </select>
+                </div>
+            </div>
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
